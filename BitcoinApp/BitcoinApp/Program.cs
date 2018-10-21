@@ -17,7 +17,10 @@ namespace BitcoinApp
             Help();
             while (running)
             {
+                Console.WriteLine();
+                Console.Write(">");
                 var command = Console.ReadLine();
+                Console.WriteLine();
                 var commandSplit = command.Split(' ');
                 switch (commandSplit.First())
                 {
@@ -98,6 +101,7 @@ namespace BitcoinApp
                 Console.WriteLine("Amount: " + transaction.Amount);
                 Console.WriteLine("Confirmations: " + transaction.Confirmations);
                 Console.WriteLine("Spendable: " + transaction.Spendable);
+                Console.WriteLine("-------------------");
             }
         }
     }
